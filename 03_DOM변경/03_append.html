@@ -11,6 +11,7 @@
 
 	<div id="container">
 		<p>안녕하세요</p>
+		
 	</div>
 	
 	<!---------- jQuery code Start ---------->
@@ -19,7 +20,8 @@
 		// append()는 지정한 태그내의 텍스트 뒷부분에 HTML 추가
 		// div#container 내 <p>안녕하세요</p> 뒤에 <p>반갑습니다</p>를 추가하시오
 	
-		
+		$('#container').append("<p>반갑습니다</p>"); // 앞에 부모가 대상임. 태그를 지정하면 태그가 부모 안에 제일 마지막에 들어감
+		$('#container').append( $('#container p:first') ); 
 		
 		
 		

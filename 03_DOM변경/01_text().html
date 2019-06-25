@@ -22,8 +22,12 @@
 		// text()는 지정된 요소 내의 내용을 바꿀 때 사용
 
 		// div#main의 내용을 div#intro 내 텍스트 내용으로 바꾸시오
+		console.log( $('#intro').text() );
+		console.log( $('#main').text() );
+		// text 값을 가져옴
 
-
+		var intro = $('#intro').text();
+		$('#main').text(intro);
 
 
 	</script>

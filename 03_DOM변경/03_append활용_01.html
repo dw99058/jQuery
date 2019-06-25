@@ -23,10 +23,12 @@
 	<script>
 
 		// pic3.jpg 파일을 세번째 추가
+		$('#container').append(" <img src='pic3.jpg' alt='' width='100' /> ")
 
 		
 		// 첫번째 이미지를 마지막으로 이동
-
+		$('#container').append( $('#container img:first') );
+		
 		
 		
 	</script>

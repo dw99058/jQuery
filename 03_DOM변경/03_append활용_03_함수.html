@@ -20,6 +20,14 @@
 	<script>
 
 		// 함수를 활용한 이미지 추가
+		function imgs(){
+			var imgPath1 = "<img src='pic1.jpg' alt='' width='100' />";
+			var imgPath2 = "<img src='pic2.jpg' alt='' width='100' />";
+			var imgPath3 = "<img src='pic3.jpg' alt='' width='100' />";
+			var imgPath4 = imgPath1 + imgPath2 + imgPath3;
+			return imgPath4;
+		}
+		$('#container').append(imgs());
 		
 
 	</script>

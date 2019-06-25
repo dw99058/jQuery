@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#content1').find('.doc').children('p').css('backgroundColor', 'pink');
+            $('.doc').parent().siblings().find('ul').css('backgroundColor', 'skyblue');
+            $('#list').parent().siblings().find('.doc').find('h1').css('color','red');
+        })
+    </script>
+</head>
+<body>
+    <div id="content1">
+        <h1>Lorem Ipsum</h1>
+        <div class="doc">
+            <h1>jQuery Start</h1>
+            <p>Lorem Ipsum is simply...</p>
+        </div>
+        <p>Lorem Ipsum is simply...</p>
+    </div>
+    <div id="content2">
+        <ul id="list">
+            <li>Lorem Ipsum1</li>
+            <li>Lorem Ipsum2</li>
+            <li>Lorem Ipsum3</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -22,6 +22,11 @@
 		// html()은 html을 가져올 때 사용
 		// div#main 요소 내부를 div#intro 내부의 태그요소들로 변경하시오
 
+		console.log( $('#intro').html() );
+		console.log( $('#main').html() );
+
+		var htmlString = $('#intro').html();
+		$('#main').html(htmlString);
 
 
 	</script>

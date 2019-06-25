@@ -22,7 +22,10 @@
 	<script>
 			  
 		// 버튼을 클릭할 때마다 div#container 내부에 pic1.jpg 추가하기
-		
+		$('#append').on('click', function(){
+			var imgPath = "<img src='pic1.jpg' alt='' width='100' />";
+			$('#container').append(imgPath);
+		})
 		
 		
 

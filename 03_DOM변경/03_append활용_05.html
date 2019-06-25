@@ -22,7 +22,11 @@
 			  
 		// 버튼을 클릭할 때 div#container 내부에 랜덤이미지 추가하기
 		
-		
+		$('#append').on('click', function(){
+			var randomNum = Math.ceil(Math.random()*3);
+			var imgPath = "<img src='pic" + randomNum + ".jpg' alt='' width='100' />"
+			$('#container').append(imgPath);
+		})
 	  
 	  
 

@@ -29,7 +29,10 @@
 	<script>
 
 		// id 값이 part1인 p 태그의 바로 다음에 위치한 노드를 선택하시오
-		
+		$('#part1').on('click',function(){
+			$(this).next().css('backgroundColor', 'pink');
+		})
+
 
 	</script>
 	

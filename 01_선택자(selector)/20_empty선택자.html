@@ -29,7 +29,8 @@
 	<script>
 
 		// 요소에 텍스트가 없는 노드 (공백도 문자로 인식)
-
+		$('li:empty').css('backgroundColor', 'pink');
+		$('li:not(:empty)').css('backgroundColor', 'yellow');
 
 	</script>
 	
