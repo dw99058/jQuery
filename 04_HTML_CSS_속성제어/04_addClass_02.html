@@ -26,8 +26,23 @@
 	<script>
 
 		// 각 이미지를 클릭시 클래스 네임 type1, type2, type3 을 적용하시오
-		
-		
+		/*
+		$('img:eq(0)').on('click',function(){
+			$(this).addClass('type1');
+		})
+		$('img:eq(1)').on('click',function(){
+			$(this).addClass('type2');
+		})
+		$('img:eq(2)').on('click',function(){
+			$(this).addClass('type3');
+		})
+		*/ // 굉장히 비효율적임
+
+		$('img').on('click',function(){
+			var n = $(this).index() + 1; // 클릭한 이 요소의 인덱스 번호 (인덱스는 0,1,2 지만 클래스 이름은 1,2,3 이므로 +1 )
+			console.log(n);
+			$(this).addClass('type'+n); // 클래스명 바뀌는 부분을 변수처리! 문자열과 숫자를 합치면 string이 되기때문에 +1한다고 숫자가 산수되는게 아니다. 단, 괄호로 묶으면 (n+1) 산수된다.
+		})
 		
 		
 

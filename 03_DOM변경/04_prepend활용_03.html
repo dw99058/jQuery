@@ -25,7 +25,12 @@
 	<script>
 	 
 		// 버튼 클릭시 맨 앞의 이미지와 마지막 이미지를 이동한다
-		
+		$('#prepend').on('click',function(){
+			$('#container').prepend($('#container img:last'));
+		})
+		$('#append').on('click',function(){
+			$('#container').append($('#container img:first'));
+		})
 		
 		
 

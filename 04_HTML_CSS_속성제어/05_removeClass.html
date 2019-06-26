@@ -27,9 +27,12 @@
 	
 		// 선택한 태그의 모든 클래스 삭제
 		
-		
 		// 클래스 지정해서 삭제
 		
+		$('img').on('click',function(){
+			//$('img').removeClass(); // ()안에 안적으면 모든 클래스 없앤다.
+			$(this).removeClass();
+		})
 		
 	</script>
 

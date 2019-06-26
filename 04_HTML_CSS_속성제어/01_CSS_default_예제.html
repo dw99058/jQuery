@@ -12,19 +12,15 @@
 
 	<!---------- jQuery code Start ---------->
 	<script>
-		
-		// $( "selector" ).css( "properties", "value" );
-		// $("div").css( "backgroundColor", "#ddd" );
-		
-		// css를 여러개 적용시
-		// $( "selector" ).css( { "properties" : "value" , "properties" : "value" , "properties" : "value" } );
-
-		// $("div").css( { "backgroundColor" : "#ddd",
-		//					  "color" : '#f00',
-		//					  "width" : "200px",
-		//					  "height" : "200px",
-		//					  "fontSize' : "30px"
-		//					  } );
+		//$('div').css('width','100px').css('border','1px solid #000');
+		$('div').css({
+			width:'100px',
+			height:100, //px 단위 빼면 따옴표 생략 가능
+			border:'1px solid #000', // 단일 속성은 따옴표 생략 가능
+			backgroundColor:'pink', // - 하이폰 생략하고 대문자 하면 따옴표 생략 가능!
+			fontSize:'30px',
+			lineHeight: "30px" // line-height는 px 생략하면 배수로 인식됨
+		})
 			
 	</script>
 	

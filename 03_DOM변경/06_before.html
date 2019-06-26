@@ -18,7 +18,8 @@
 
 		// 아이디 container 요소 앞에 "<div>새로이 추가된 형제입니다</div> 추가
 		
-		
+		$('#container').before("<div id='wrap'>새로이 추가된 형제입니다</div>")
+		$('#wrap').before($('#container'));
 
 	</script>
 	
