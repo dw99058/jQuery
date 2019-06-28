@@ -19,16 +19,21 @@
 </head>
 
 <body>
-	<img src="th1.jpg" alt=" " />
-	<img src="th2.jpg" alt=" " />
-	<img src="th3.jpg" alt=" " />
+	<img src="th1.jpg" alt=" ">
+	<img src="th2.jpg" alt=" ">
+	<img src="th3.jpg" alt=" ">
 
 	<!---------- jQuery code Start ---------->
 
 	<script>
 
 		// toggleClass는 addClass와 removeClass를 번갈아가며 실행
-		
+		$("img").on('click', function() {
+			var num = $(this).index() + 1;
+			console.log(num);
+			$(this).toggleClass('type' + num);
+
+		});
 		
 
 	</script>

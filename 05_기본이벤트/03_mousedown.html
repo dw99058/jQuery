@@ -21,7 +21,13 @@
 	<script type="text/javascript">
 
 		// 마우스다운시 이미지가 바뀌도록
-		
+		$("a").on('mousedown', function() {
+			var imgPath = $(this).attr("href");
+			var textName = $(this).text();
+			$("p img").attr({ src: imgPath, alt: textName });
+		}).on('click', function() {
+			return false;
+		});
 		
 		
 	</script>

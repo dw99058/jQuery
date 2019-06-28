@@ -19,8 +19,14 @@
 
 	<script>
 	
-	// hasClass를 이용하여 본문의 문장처럼 완성하시오
-	
+
+			// hasClass를 이용하여 본문의 문장처럼 완성하시오
+			$("div").addClass(function () {
+				if ( $("div").hasClass('red')  ) {
+					$(this).removeClass().addClass("yellow");
+					$("p").text("ClassName is yellow");
+				}
+			})
 		
 		
 	</script>

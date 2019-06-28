@@ -18,7 +18,50 @@
 	<script type="text/javascript">
 	 
 		// 리스트를 클릭할 때마다 이미지를 그 리스트의 이미지로 변경하시오
-		
+		/*
+		$("a").on('click', function() {
+			var imgPath = $(this).attr("href");
+			var textName = $(this).text();
+			// console.log(imgPath);
+			$("p img").attr({ src: imgPath, alt: textName });
+			return false;
+		});*/
+
+		$("li").on('click', function() {
+			var imgPath = $(this).children('a').attr('href');
+			// var textName = $(this).children('a').text();
+			var textName = $("> a", this).text();
+			$("p img").attr({ src: imgPath, alt: textName });
+			return false;
+		});
+
+		// $('li').bind('click', function() {});
+		// $('li').click(function() { });
+
+
+
+		/*	$("a:eq(0)").click(function(){
+				$("img").attr("src","flower.jpg").attr("alt","꽃");
+				return false;
+			});
+
+			$("a:eq(1)").click(function(){
+				$("img").attr("src","sea.jpg").attr("alt","바다");
+				return false;
+			});
+
+			$("a:eq(2)").click(function(){
+				$("img").attr("src","Jellyfish.jpg").attr("alt","해파리");
+				return false;
+			});
+
+			$("a:eq(3)").click(function(){
+				$("img").attr("src","Building.jpg").attr("alt","건물");
+				return false;
+			});
+		*/
+
+
 		
 		
 	</script>

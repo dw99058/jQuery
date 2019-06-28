@@ -7,7 +7,19 @@
 		<script src="scripts/jquery-1.7.2.min.js"></script>
 		<script>
             // 할 일 목록
-
+			$(document).ready(function(){
+				/*
+				1. guest_box인 클래스를 클릭시 #main의 제일 하단에 p 태그가 추가 되도록
+				2. 추가된 p태그에 할인율이 표시되도록 (당신의 할인율은 n% 입니다)
+				3. 할인율(n)은 10,20,30,40,50% 가 랜덤하게 출력되도록
+				4. 어떤 guest_box를 클릭하더라도 딱 한번만 출력되도록
+				*/
+				
+				$('.guest_box').on('click',function(){
+					var n = Math.ceil(Math.random()*5)*10;
+					$('#main').append('<p>당신의 할인율은 ' + n + '% 입니다</p>')
+				})
+			})
 		</script>
 	</head> 
 	<body> 

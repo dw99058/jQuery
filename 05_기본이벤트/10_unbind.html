@@ -27,7 +27,41 @@
 		// 리스트(a태그) 클릭시 이미지 바뀌도록
 		// 버튼을 클릭하면 a 태그에 설정된 이벤트 취소
 
-		
+
+
+
+
+		// bind,unbind 옛날 문법
+		/*
+		$('li').bind('click',function(e){ // bind 는 옛날식 문법임
+			var imgPath = $(this).children('a').attr('href');
+			var imgText = $(this).children('a').text();
+			$('p img').attr({
+				src : imgPath,
+				alt : imgText
+			})
+			e.preventDefault();
+		})
+
+		$('button').on('click',function(){ // 취소버튼 누르면 위에 클릭이벤트 사라짐..
+			$('li').unbind();
+		})
+		*/
+
+		// on,off 최신 문법
+		$('li').click(function(e){ // bind 는 옛날식 문법임
+			var imgPath = $(this).children('a').attr('href');
+			var imgText = $(this).children('a').text();
+			$('p img').attr({
+				src : imgPath,
+				alt : imgText
+			})
+			e.preventDefault();
+		})
+
+		$('button').on('click',function(){ // 취소버튼 누르면 위에 클릭이벤트 사라짐..
+			$('li').off();
+		})
 			
 		
 	</script>

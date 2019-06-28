@@ -22,7 +22,18 @@
 
         // 버튼 클릭시 건물이미지 리스트를 추가하고, a 이벤트가 적용되도록
 
-
+        $('li').live('click',function(e){
+            var imgPath = $(this).children('a').attr('href');
+            var imgText = $(this).children('a').text();
+            $('p img').attr({
+                src : imgPath,
+                alt : imgText
+            })
+            e.preventDefault();
+        })
+        $('button').one('click',function(){ // one 써서 한번만 추가되도록 함
+            $('ul').append('<li><a href="building.jpg">건물</a></li>');
+        })
 
        
 

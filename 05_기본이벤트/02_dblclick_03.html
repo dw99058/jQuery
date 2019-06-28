@@ -20,7 +20,13 @@
 	<script type="text/javascript">
 
 		// 리스트(a 태그)를 클릭시 해당 이미지로 변경하시오
-		
+		$("a").on('dblclick', function() {
+			var imgPath = $(this).attr("href");
+			var textName = $(this).text();
+			$("p img").attr({ src: imgPath, alt: textName });
+		}).on('click', function() {
+			return false;
+		})
 		
 		
 	</script>

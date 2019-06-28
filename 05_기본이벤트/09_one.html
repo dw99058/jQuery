@@ -23,7 +23,15 @@
 		
 		// 리스트(a 태그) 클릭이벤트 한번만 적용되도록
 		
-			
+		$('li').one('click',function(){ // on 대신 one쓰면 한번만 실행됨!
+			var imgPath = $(this).children('a').attr('href');
+			var imgText = $(this).children('a').text();
+			$('p img').attr({
+				src : imgPath,
+				alt : imgText
+			})
+			return false;
+		})
 			
 		
 	</script>

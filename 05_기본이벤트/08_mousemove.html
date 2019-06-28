@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <title>mousemove()</title>
 <script src="jquery-1.7.2.min.js"></script>
+<style>
+	img{
+		position: absolute;
+		left: 0;
+		right: 0;
+	}
+</style>
 </head>
 <body>
 
@@ -22,7 +29,18 @@
 		
 		// 마우스가 이미지 위에서 움직일 때 좌표값 출력하기
 		
-		
+		$(document).on('mousemove',function(event){
+			/*
+			$('p:eq(0)').text('screenXY의 X축: ' + event.screenX + 'Y축: ' + event.screenY)
+			$('p:eq(1)').text('pageXY의 X축: ' + event.pageX + 'Y축: ' + event.pageY )
+			$('p:eq(2)').text('clientXY의 X축: ' + event.clientX + 'Y축: ' + event.clientY)
+			$('p:eq(3)').text('offsetXY의 X축: ' + event.offsetX + 'Y축: ' + event.offsetY)
+			*/
+			$('img').css({
+				left : event.pageX,
+				top : event.pageY
+			})
+		})
 			
 			
 		

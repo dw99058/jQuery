@@ -17,6 +17,18 @@
 		// $("선택자").hover( function( ) {    }, function {     } );
 		
 		// 이미지 롤오버시 바다와 빌딩이미지를 로드하시오
+
+		$('img').hover(function(){
+			$(this).attr({
+				src : 'sea.jpg',
+				alt : '바다'
+			})
+		},function(){
+			$(this).attr({
+				src : 'building.jpg',
+				alt : '건물'
+			})
+		})
 		
 		
 

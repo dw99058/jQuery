@@ -13,12 +13,23 @@
 		<li><a href="Building.jpg">건물</a></li>
 	</ul>
 	<p><img src="flower.jpg" alt="꽃" /></p>
-	
-	
+
 	<!---------- jQuery code Start ---------->
 	<script type="text/javascript">
 
 		// 마우스를 클릭한상태를 해제했을 때 이미지가 바뀌도록
+		$("a").on('mouseup', function() {
+			var imgPath = $(this).attr('href');
+			var textName = $(this).text();
+			$("p img").attr({ src: imgPath, alt: textName })
+						 .css({ border: 0 });
+		}).on('click', function(event) {
+			event.preventDefault();
+		}).on('mousedown', function() {
+			$("p img").css({ border: "5px solid #f00" });
+		});
+
+
 		
 		
 		
