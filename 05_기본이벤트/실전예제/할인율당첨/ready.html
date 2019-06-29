@@ -14,11 +14,19 @@
 				3. 할인율(n)은 10,20,30,40,50% 가 랜덤하게 출력되도록
 				4. 어떤 guest_box를 클릭하더라도 딱 한번만 출력되도록
 				*/
-				
-				$('.guest_box').on('click',function(){
+
+				var gusetBox = $('#main .guest_box');
+				function addText(){
 					var n = Math.ceil(Math.random()*5)*10;
 					$('#main').append('<p>당신의 할인율은 ' + n + '% 입니다</p>')
+				}
+				
+				gusetBox.on('click',function(){
+					var n = Math.ceil(Math.random()*5)*10;
+					addText();
+					gusetBox.off();
 				})
+				
 			})
 		</script>
 	</head> 
