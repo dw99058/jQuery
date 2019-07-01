@@ -5,6 +5,7 @@
 <title> slideDown()  </title>
 <style>
 	div { display: none; }
+	/* img {display: none;} */
 </style>
 <!-- jQuery library -->
 <script src="jquery-1.7.2.min.js"></script>
@@ -24,7 +25,9 @@
 
         // show()와 달리 slideDown()은 위에서 아래로 나타나는 애니메이션
 
-
+		$('#down').on('click',function(){
+			$('div').slideDown(2000);
+		})
 
 	</script>
 

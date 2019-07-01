@@ -21,6 +21,13 @@
 	
 	<!---------- jQuery code Start ---------->
 	<script type="text/javascript">
+
+		$('button').on('click',function(){
+			//$('div').css({display : 'block'})
+			$('div').show(3000,function(){
+				$(this).css({backgroundColor:'blue'}) // 콜백함수
+			});
+		})
 		
 		// show() : display:none 상태의 노드를 보이도록 하는 명령어
 			

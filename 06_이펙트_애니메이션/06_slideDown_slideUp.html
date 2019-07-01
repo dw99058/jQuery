@@ -20,7 +20,19 @@
 	<!---------- jQuery code Start ---------->
 	<script>
 
-		
+		$('#up').click(function(){
+			$('div:not(:animated)').slideUp(2000,function(){
+				$('img').attr('src','sample2.jpg');
+				alert("div의 display 속성은" + $(this).css("display"));
+			});
+		})
+
+		$('#down').click(function(){
+			$('div:not(:animated)').slideDown(2000,function(){
+				$('img').attr('src','sample2.jpg');
+				alert("div의 display 속성은" + $(this).css("display"));
+			});
+		})
 
 	</script>
 

@@ -26,6 +26,17 @@
 		// $("selector").toggle(속도);			
         // 버튼을 클릭때마다 나타나고 사라지는 애니메이션 구현
 
+		/*
+		$('button').toggle(function(){
+				$('div').show();
+			},function(){
+				$('div').hide();
+			}
+		)
+		*/
+		$('button').on('click',function(){
+			$('div:not(:animated)').toggle(1000); // show hide 기능
+		})
 
 		
 	</script>

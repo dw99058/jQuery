@@ -11,13 +11,20 @@
 </head>
 <body>
 
+	<p><img src="flower.jpg" alt="flower" /></p>
 	<button id="fadeIn">표시</button>
 	<button id="fadeOut">비표시</button>
-	<p><img src="flower.jpg" alt="flower" /></p>
 	
 	<!---------- jQuery code Start ---------->
 	<script type="text/javascript">
 
+		$('#fadeIn').click(function(){
+			$('img').fadeIn(2000);
+		})
+
+		$('#fadeOut').click(function(){
+			$('img').fadeOut(2000);
+		})
        
 	</script>
 
