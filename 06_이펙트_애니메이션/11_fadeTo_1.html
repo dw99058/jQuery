@@ -20,7 +20,15 @@
 		// 버튼 클릭시 이미지가 반투명하게
 		// $("selector").fadeTo(속도, 투명도);
 		
-
+		$('#fade0').click(function(){
+			$('p img').fadeTo(500,0); // display 속성이 아닌 opacity 속성을 이용함
+		})
+		$('#fade50').click(function(){
+			$('p img').fadeTo(500,0.5);
+		})
+		$('#fade100').click(function(){
+			$('p img').fadeTo(500,1);
+		})
 
 	</script>
 

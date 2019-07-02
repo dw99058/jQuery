@@ -27,8 +27,11 @@
 		$("button").click( function() {
 			
 		    // var opacity  변수 생성
-
-
+			var opacity = $(this).attr('title');
+			$('img').fadeTo(500,opacity,function(){
+				$('p').text('현재 투명도는 ' + opacity + ' 입니다.');
+			});
+			
 			
 		});		
 

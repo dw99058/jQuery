@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>animate</title>
+<!-- CSS Source -->
+<style>
+	#box{
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		background-color: #f00;
+	}
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+	<div id="box"></div>
+
+	<script>
+		$('#box').animate({
+			left : 700,
+			width : 300,
+			height : 400,
+			opacity : 0.5
+		},1000,"linear",function(){ // swing(기본값), linear
+			$(this).css({
+				backgroundColor : 'blue' // 배경과 속도는 다른 플러그인 써서 바꿔야 함
+			})
+		}) // 안에 중괄호 무조건 있어야 함
+	</script>
+	
+</body>
+</html>

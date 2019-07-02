@@ -8,7 +8,11 @@
 
 	$(document).ready(function(){
 	
-		
+		$('#clickMe').click(function(){
+			$('img').fadeIn(1000); // 부모가 display none 상태면 자식도 display none이다.
+			$('#picframe').slideToggle('slow');
+			
+		})
 		
 	});
 	
