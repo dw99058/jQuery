@@ -5,6 +5,7 @@
 <title> animateColor </title>
 <!-- jQuery library -->
 <script src="jquery-1.7.2.min.js"></script>
+<script src="../jquery-ui.min.js"></script>
 
 <style>
 ul { min-width:800px; }
@@ -25,7 +26,7 @@ li a{
 
 <body>
 <ul>
-    <li><a href="#" data-bg="#EF4018">Home</a></li>
+    <li><a href="#" data-bg="#EF4018">Home</a></li> <!--    가상 속성 : data-***      -->
     <li><a href="#" data-bg="#00C8C3">About</a></li>
     <li><a href="#" data-bg="#AA184D">portfolio</a></li>
     <li><a href="#" data-bg="#05184D">Contact</a></li>
@@ -35,6 +36,12 @@ li a{
 
 	// 각 메뉴(li)에 롤오버시 data-bg의 값에 설정된 색상으로 변하는 애니메이션
 	
+	$('li').hover(function(){
+		var bgColor = $(this).children('a').data('bg') // 가상 속성 data 이름이 bg 일 때
+		$(this).children('a').stop().animate({'backgroundColor':bgColor , 'color':'#fff'},1000); // stop()을 해야지 마우스 없을때 애니메이팅 안함
+	},function(){
+		$(this).children('a').stop().animate({'backgroundColor':'#9AB92E' , 'color':'#000'},1000);
+	})
 	
 	
 </script>

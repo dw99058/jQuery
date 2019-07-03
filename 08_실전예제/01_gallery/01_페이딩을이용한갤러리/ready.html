@@ -65,6 +65,15 @@
 	</div>
 	
 	<script>
+
+		$('#navi li').click(function(e){
+			var n = $(this).index()+1;
+			$('#main').prepend('<img src="images/photo' + n + '.jpg" alt="" />');
+			$('#main img:eq(1)').fadeOut(400,function(){ // 계속 추가되는거를 없애려면 last child가 아니라 eq(1)을 해야된다.
+				$(this).remove();
+			});
+			e.preventDefault();
+		})
 	
 		/* 할 일 목록
 		

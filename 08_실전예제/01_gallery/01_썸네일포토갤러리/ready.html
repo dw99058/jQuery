@@ -61,6 +61,14 @@
 		3. a 태그의 값을 제거
 		*/
 		
+		$('.thumbs a').click(function(){
+			var imgPath = $(this).attr('href');
+			var imgName = $(this).attr('title');
+			
+			$('#largeImg img').attr({'src':imgPath,'alt':imgName}).css({'opacity':0}).stop().animate({'opacity':1},1000)
+			//$('#largeImg img').attr({'src':imgPath,'alt':imgName}).hide().fadeIn(1000);
+			return false;
+		})
 	</script>
 	
 </body>

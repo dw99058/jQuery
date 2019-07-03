@@ -26,7 +26,11 @@
 <script>
 
 	// 각 버튼을 클릭시 움직이는 속도를 data-ease속성의 값으로 움직이게 하시오
-
+	$('button').click(function(){
+		var timing = $(this).data('ease');
+		$('div').slideToggle(500, timing)
+	})
+	// https://easings.net/ 에 예제들 많음
 
 
 </script>
