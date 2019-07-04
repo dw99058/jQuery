@@ -36,6 +36,18 @@
 
 	<!---------- jQuery code Start ---------->
 	<script>
+
+		setInterval(function(){
+			$('.fadeShow img:eq(0)').animate({
+				opacity : 0
+			},1000,function(){
+				$('.fadeShow').append(this);
+				$(this).css({
+					opacity : 1
+				})
+			})
+		},2000)
+	
 		
 		/* 할 일 목록
 		

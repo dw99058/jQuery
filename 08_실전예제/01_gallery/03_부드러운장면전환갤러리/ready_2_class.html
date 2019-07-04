@@ -37,6 +37,19 @@
 
 	<!---------- jQuery code Start ---------->
 	<script>
+
+		setInterval(function(){
+			$('.fadeShow .active').animate({
+				opacity : 0
+			},500,function(){
+				$('.fadeShow').append(this);
+				$(this).css({
+					opacity : 1
+				}).removeClass('active');
+				$('.fadeShow img:eq(0)').addClass('active');
+			})
+		},2000)
+		
 		
 		/* 할 일 목록
 		

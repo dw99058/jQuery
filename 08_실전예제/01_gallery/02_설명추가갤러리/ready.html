@@ -10,7 +10,7 @@
 		margin:20px auto;
 		padding:0;	
 		width: 620px;
-		background:#192839;
+		background:#fcc;
 	}
 	.thumbs {
 	   width:100px;	
@@ -72,6 +72,30 @@
 
 	<!---------- jQuery code Start ---------->
 	<script>
+
+		$('em').hide();
+		$('.thumbs a').click(function(e){
+			var imgPath = $(this).attr('href');
+			var textName = $(this).attr('title');
+			
+			var caption = $(this).next('em').text();
+
+			$('#largeImg img').attr({'src':imgPath, 'alt':textName}).stop().css('opacity',0).animate({'opacity':1});
+			
+			$('#caption').remove();
+			$('#largeImg').append('<div id = "caption">');
+			
+			$('#caption').text(caption);
+
+			var captionHeight = $('#caption').innerHeight(); // 그냥 height()는 padding 포함 안된 높이이다. margin까지 포함시키려면 outerHeight()를 써야한다.
+			$('#caption').css({'opacity':0}).animate({'top':-captionHeight,'opacity':1});
+			console.log(captionHeight)
+
+			//$('#caption').animate({'top':-parseInt($('#caption').css('height'))}); // css('height') 는 문자열이라서  parseInt 해야 숫자가 된다.
+			//console.log(parseInt($('#caption').css('height')));
+
+			e.preventDefault();
+		})
 
 		/* 할 일 목록
 		
