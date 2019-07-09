@@ -99,15 +99,25 @@
 		
 		$("dl dt").click(function(){
 		
+			$('dd').not($(this).next('dd')).animate({ // :not()을 하지 않으면 전체가 접혔다가 펼쳐진다..
+				width : 0
+			})
+			$(this).next('dd').animate({
+				'width' : 695
+			})
 			
+			$('dt span').removeClass('selected');
+			$(this).children('span').addClass('selected');
 		
 		}).mouseover(function(){
 			
 			// 마우스 오버시 클래스 over 추가
+			$(this).children('span').addClass('over');
 			
 		}).mouseout(function(){
 		
 			// 마우스 오버시 클래스 over 삭제
+			$(this).children('span').removeClass('over');
 
 		});
 	

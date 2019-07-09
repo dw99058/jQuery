@@ -65,7 +65,24 @@
 	
 		/* 할 일 목록을 적어보세요 */
 	   
-	   
+	   $('#home').toggle(function(){
+		   $('#menu:not(:animated)').animate({
+			   left : 50
+		   })
+	   },function(){
+			$('#menu:not(:animated)').animate({
+			   left : -600
+		   })
+	   })
+	   $('#menu li').hover(function(){
+		   $(this).stop().animate({
+			   opacity : 1
+		   },300)
+	   },function(){
+			$(this).stop().animate({
+			   opacity : 0.7
+		   },300)
+	   })
 	   
 
 		 

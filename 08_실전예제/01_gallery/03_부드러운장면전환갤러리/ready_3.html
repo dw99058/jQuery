@@ -16,7 +16,9 @@
 		background:#666;
 		width:600px; 
 		height:350px; 
-		border:2px solid #FDF6DD;        
+		border:2px solid #FDF6DD;  
+		position: relative;
+		overflow: hidden;      
 	}
 	.fadeShow img{position:absolute;}
 
@@ -32,7 +34,8 @@
 <div class="fadeShow">
      <img src="slide1.jpg" alt="image1" class="active" />
      <img src="slide2.jpg" alt="image2" />
-     <img src="slide3.jpg" alt="image3" />
+	 <img src="slide3.jpg" alt="image3" />
+	 <img src="slide4.jpg" alt="image4" />
 </div>
 
 
@@ -53,6 +56,18 @@
 			동시에 클래스 네임 삭제
 		
 		*/
+
+		setInterval(function(){
+			$('.fadeShow img:eq(1)').addClass('active').css({ // 두번째 이미지에 active 주면 첫번째보다 위로 올라온다
+				'opacity' : 0
+			}).animate({
+				'opacity' : 1
+			},1000,function(){
+				//첫번째이미지 맨 뒤로
+				$('.fadeShow').append($('.fadeShow img:eq(0)'));
+				$('.fadeShow img:last').removeClass('active')
+			})
+		},2000)
 		
 	</script>
 	

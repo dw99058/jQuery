@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title> toggle </title>
 <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery-ui.min.js"></script>
 
 <style>
 	div {width:200px; height:100px; background:#F00;}
@@ -24,6 +25,21 @@
 		Tip1. 하나의 요소를 이용하여 여러가지 이펙트를 제어		
 		
 		*/	   
+
+		$('div').toggle(function(){
+			$(this).css({
+				background : 'yellow'
+			})
+		},function(){
+			$(this).css({
+				background : 'black'
+			})
+		},function(){
+			$(this).css({
+				background : 'green'
+			})
+		})
+		// toggle()은 최신 제이쿼리에서 안되기때문에 제이쿼리 migrate 함께 들고와야 한다!
 		 
 	</script>
 </body>

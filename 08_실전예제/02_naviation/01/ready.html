@@ -102,6 +102,15 @@
 		
 		*/
 
+		$('.sub').hide();
+		$('.title').click(function(){
+			//$('.sub').hide();
+			//$(this).next('.sub').toggle();
+
+			$('.sub').not( $(this).next() ).slideUp();
+			$(this).next().slideToggle();
+		})
+
 	</script>
 </body>
 </html>
