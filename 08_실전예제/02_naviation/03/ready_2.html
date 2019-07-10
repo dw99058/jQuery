@@ -93,30 +93,48 @@
 			<li id="btn2"><a href="image/slide3.jpg">3</a></li>
 			<li id="btn3"><a href="image/slide4.jpg">4</a></li>     
 	   </ul>
+
+	   <div id="btnWrap">
+		<a href="#" id = "stop">Stop</a>
+		<a href="#" id = "play">Play</a>
+	   </div>
 		
 	</div>
 
 	<!---------- jQuery code Start ---------->        
 	<script>
-		var pos1 = -600
-		var slideLength = $('#btnGroup li').length*-600;
-		setInterval(function(){
+		var liWidth = $('#viewer img').width();
+		var pos1 = -liWidth
+		var slideLength = $('#btnGroup li').length*-liWidth;
+		function sliding(){
 			$('#viewer').animate({
 				left : pos1
 			})
-			pos1 -= 600
+			pos1 -= liWidth
 
 			if(pos1 <= slideLength){
 				pos1 = 0
 			}
-		},2000)
+		}
+		var pause =	setInterval(sliding,2000); // clearInterval 하기 위해 변수에 담는다.
 		 
 		$('#btnGroup li').click(function(){
 			var pos = $(this).index()*-600;
 			$('#viewer').animate({
 				left : pos
 			})
+
+			clearInterval(pause); // 페이징 클릭하면 슬라이더 애니메이션 멈추게
+			pause =	setInterval(sliding,3000); // 영원히 멈추면 안되니까 바로 다시 시작하게
+
 			return false;
+		})
+
+		$('#stop').click(function(){
+			clearInterval(pause);
+		})
+		$('#play').click(function(){
+			pause = setInterval(sliding, 3000)
 		})
 				 
 	</script>

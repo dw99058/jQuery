@@ -11,8 +11,8 @@
         p.prev { position: absolute; top: 50px; left: -10px; }
         p.next { position: absolute; top: 50px; right: -10px; }
         #wrap { width:100%; height:100%; overflow:hidden; }
-        ul { float: left; }
-        ul li { list-style: none; float: left; width:140px; height:105px; display:inline; }
+        ul::after{content: ''; display: block; clear: both;}
+        ul li { list-style: none; float: left; width:140px; height:105px;}
 
     </style>
 
@@ -33,18 +33,49 @@
     <script>
 	
         // 초기
-        
+        var liWidth = $('#wrap li').width();
+        console.log(liWidth)
+
+        var totalWidth = liWidth*$('#wrap li').length;
+        console.log(totalWidth)
+
+        $('#wrap ul').css({
+            width : totalWidth
+        })
 
         // 이전
-        $("p:first").click(function () {
-            
+        $(".next").click(function () {
+            $('#wrap ul:not(:animated)').animate({
+                'margin-left' : -liWidth
+            },1000,function(){
+                $(this).append($('#wrap ul li:first'));
+                $(this).css({
+                    'margin-left' : 0
+                })
+            })
         });
 
         // 다음
-        $("p:last").click(function () {
-            
-			
+        $(".prev").click(function () {
+
+            $('#wrap ul:not(:animated)').prepend($('#wrap ul li:last')).css({
+                'margin-left' : -liWidth
+            }).animate({
+                'margin-left' : 0
+            },1000);
+
         });
+
+        // 슬라이드 자동
+        var pause = setInterval(function(){
+            $(".next").click();
+        },2000)
+        $('p').click(function(){
+            clearInterval(pause);
+            pause = setInterval(function(){
+                $(".next").click();
+            },2000)
+        })
 		
     </script>
 </body>
