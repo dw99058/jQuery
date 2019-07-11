@@ -28,12 +28,45 @@
 
 	<!------------------------ jQuery 코드 ----------------------->
 	<script>
+		function imgArray(){
+			for(var i = 0; i < 21; i++ ){
+				var imgPath = '<img src="seq/seq' + i + '.png" />'
+				$('#ani').append(imgPath)
+			}
+			$('#ani img:first').show();
+		}
 		
-		
-	
-	
-	
-	
+		imgArray();
+
+		// 초기설정
+		var count = 0;
+		var timing; // setInterval 제어하기 위한 변수
+
+		function nextFrame(){
+			count++;
+			if(count > 20){
+				count = 20;
+				clearInterval(timing);
+			}
+			$('#ani img:visible').hide();
+			$('#ani img:eq(' + count + ')').show();
+		}
+
+		$('#ani').on('mouseenter',function(){
+			timing = setInterval(nextFrame,100) 
+		}).on('mouseleave',function(){
+			timing = setInterval(prevFrame,100) 
+		})
+
+		function prevFrame(){
+			count--;
+			if(count < 0){
+				count = 0
+				clearInterval(timing);
+			}
+			$('#ani img:visible').hide();
+			$('#ani img:eq(' + count + ')').show();
+		}
 	
 	  
 	</script>

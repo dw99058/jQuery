@@ -57,6 +57,30 @@
 			mouseout 되었을 때는 원래대로 
 			(스타일시트에서 확인)			
 		*/		
+
+		$('#navigation li a').each(function(){ // a의 각각에다가 this
+
+			var imgPath = $(this).data('img');
+			$(this).css({
+				backgroundImage : "url(" + imgPath + ")"
+			})
+
+			$(this).hover(function(){
+				$(this).stop().animate({
+					marginLeft : 15,
+					height : 120
+				})
+			},function(){
+				$(this).stop().animate({
+					marginLeft : 0,
+					height : 30
+				})
+			})
+
+		})
+
+
+		
 	</script>
 	
 	

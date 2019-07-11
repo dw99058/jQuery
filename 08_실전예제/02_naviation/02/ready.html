@@ -84,6 +84,18 @@
 		   },300)
 	   })
 	   
+	   $('#home').on("mousemove",function(e){
+		   $('#container').css({
+			   top : e.pageY - ($(this).height()/2)
+		   })
+		   
+		   if(e.pageY <= ($(this).height()/2)){
+			   console.log("작다")
+				$('#container').css({
+					top : 0
+				})
+		   }
+	   })
 
 		 
 	</script>

@@ -67,13 +67,13 @@ p,ul,li,ol,h2,dl,dt,dd	{margin:0; padding:0; list-style:none;}
 		
 			function() {
 			
-				
+				$(this).children('dl').slideDown(200)
 
 			}, 
 			
 			function() {
 			
-				
+				$(this).children('dl').stop().slideUp(200) // down은 무조건 되게 하고 up은 stop될 수 있도록~ stop을 한군데만
 				
 			}
 			
