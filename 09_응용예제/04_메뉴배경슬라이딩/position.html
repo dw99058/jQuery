@@ -9,7 +9,7 @@
 	p.hello { background: red; }
 	
 </style>
-<script src="js/jquery-1.7.2.min.js"></script>
+<script src="jquery-1.7.2.min.js"></script>
 </head>
 <body>
  
@@ -21,7 +21,18 @@
  
 	<script>
 	
-		
+		var pos = $('.hello').position();
+		console.log(pos);
+		var pos2 = $('.hello').offset(); // 해당 요소에 적용된 margin값 등등을 포함시킨 값
+		console.log(pos2);
+
+		var posX = $('.hello').position().left;
+		console.log(posX);
+		var posY = $('.hello').position().top;
+		console.log(posY);
+
+		$('.first').text(posX + "px");
+		$('.last').text(posY + "px");
 	
 	</script>
 	

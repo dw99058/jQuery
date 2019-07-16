@@ -28,11 +28,12 @@
 	#navigation li a { text-decoration:none; color:#FFF;}
 	#navigation li a:hover {color:#0F0;}
 
-	#wrap {width:800px;margin:0 auto;margin-top:80px;  }
-	#red{background:red; height:700px;}
-	#blue{background:blue; height:700px;}
-	#yellow{background:yellow; height:700px;}
-	#black{background:black; height:700px;}
+	#wrap {width:800px;margin:0 auto;margin-top:80px; color: #fff; font-size: 50px;}
+	#wrap div{ height: 900px; }
+	#red{background:red; }
+	#blue{background:blue; }
+	#yellow{background:yellow;}
+	#black{background:black; }
 
 </style>
 </head>
@@ -66,11 +67,14 @@
 		*/
 		$("ul li a").click( function() {
 		
-			
-			
-			
-			
-			
+			var name = $(this).attr('href');
+			console.log(name)
+			var pos = $(name).position().top;
+
+			$('html, body').animate({
+				scrollTop : pos - 80
+			})
+
 			return false;
 			   
 		});

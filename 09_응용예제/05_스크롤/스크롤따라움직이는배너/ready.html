@@ -24,7 +24,14 @@
 	
 	<script>
 	
-		v
+		$(window).scroll(function(){
+			//console.log($(this).scrollTop())
+			var scrollY = $(this).scrollTop()
+			$('#banner').stop().animate({
+				top : scrollY + 20
+			})
+		})
+		
 	</script>
 	
 	
