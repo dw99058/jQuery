@@ -38,29 +38,31 @@
 		$("#floatWindow").hide();
 		
 		$("a.open").click(function(){
-			
+			$("#floatWindow").fadeIn(200);
+			return false;
 		});
 		
 		$("a.close").click(function(){
-			
+			$("#floatWindow").fadeOut(200);
+			return false;
 		});
 		
 		$("#floatWindow dt").mousedown(function(e){
-		
-			
+
+			$(document).mousemove(function(){
 				
+			})
 			
-			$(document).mousemove(function(e){
-				$("#floatWindow").css({
-					top:e.pageY - $("#floatWindow").data("clickY")+"px",
-					left:e.pageX - $("#floatWindow").data("clickX")+"px"				
-				});
-			});
-			
-			console.log($("#floatWindow").data("clickX"));
-			console.log($("#floatWindow").data("clickY"));
-			console.log($("#floatWindow").css("top"));
-			console.log($("#floatWindow").css("left"));
+			console.log($("#floatWindow").offset().left);
+			console.log($("#floatWindow").offset().top);
+			console.log(e.pageX, e.pageY)
+			console.log(e.pageX - $('#floatWindow').offset().left); // 현재의 마우스 좌표값(총 좌표값)에서 offset위치값을 뺀 값
+			console.log(e.pageY - $('#floatWindow').offset().top);
+
+			// console.log($("#floatWindow").css("top"));
+			// console.log($("#floatWindow").css("left"));
+			// console.log($("#floatWindow").data("clickX"));
+			// console.log($("#floatWindow").data("clickY"));
 			
 		}).mouseup(function(){
 			

@@ -36,6 +36,17 @@ body {
 <!------------------------ jQuery 코드 ----------------------->
 <script>
 
+	$('#colorPicker div').each(function(){ // each()는 제이쿼리의 반복문이라 보면 된다.
+		var color = $(this).text();
+		$(this).css({
+			backgroundColor : color
+		})
+		$(this).click(function(){
+			$('body').animate({
+				backgroundColor : color
+			},500)
+		})
+	})
  
 </script>
 </body>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <script src="jquery-1.7.2.min.js"></script>
+        <style>
+            #photo div { position: relative; overflow: hidden; width: 476px; height: 505px; float: left; }
+            #photo div img { position: absolute; top: 0; left: 476px;  }
+        </style>
+    </head>
+    <body>
+        <div id="photo">
+            <div class="photo1"><img src="images/fit_over.jpg" alt=""></div>
+            <div class="photo2"><img src="images/frm_over.jpg" alt=""></div>
+            <div class="photo3"><img src="images/ldn_over.jpg" alt=""></div>
+        </div>
+        <script>
+            //$("#photo div img").hide();
+            $("#photo div").each(function() {
+                var imgName = $(this).children("img").attr("src");
+                var imgPath = imgName.substr(7, 3);
+                $(this).css({ background: "url(images/" + imgPath  +".jpg) no-repeat" });
+            }).on('mouseenter', function() {
+                $(this).children().animate({ left: 0 });
+            }).on('mouseleave', function() {
+                $(this).children().animate({ left: 476 });
+            });
+
+
+
+        </script>
+    </body>
+</html>

@@ -4,10 +4,24 @@
 <title>상품 슬라이드</title>
 <meta charset="utf-8">
 <style>
-	.scroll{
-		overflow: hidden;
-		width: 400px;
-	}
+	/* 초기화 */
+	body, ul { margin: 0; padding: 0; }
+	li { list-style: none; }
+
+	/* 전체영역 */
+	#scroll_wrap { position: relative; width: 400px; padding: 50px 100px; }
+
+	/* 좌우버튼 */
+	#scroll_wrap span { position: absolute; top: 100px; }
+	#scroll_wrap .left { left: 50px;  }
+	#scroll_wrap .right {  right: 50px; }
+
+	/* 슬라이더이미지 */
+	.scroll { overflow: scroll; width: 400px;  }
+	.scroll ul { width: 1000px;  }
+	.scroll ul li { width: 90px; float: left; margin: 0 5px; }
+
+
 </style>
 <script src="jquery-1.7.2.min.js"></script>
 </head>

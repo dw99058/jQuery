@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>3단 네비게이션</title>
+    <style>
+        /* 초기화 */
+        body, ul { margin: 0; padding: 0; }
+        li { list-style: none; }
+
+        #container { width: 540px; margin: 50px auto 0; }
+        .menu {  }
+
+        /* 공통 */
+        .menu li { width: 179px; }
+        .menu li a { display: block; height: 48px;
+                        background: url(images/btn.png) no-repeat;
+                        color: #fff;
+                        text-decoration: none;
+                        text-indent: 30px;
+                        line-height: 48px; }
+        /* 개별 */
+        .menu > li { float: left; }
+        .sub > li { position: relative; }
+        .sub .sub { position: absolute; top: 0; left: 179px; }
+
+    </style>
+    <script src="jquery-1.7.2.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <ul class="menu">
+            <li><a href="#">메뉴A</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴A</a></li>
+                    <li><a href="#">서브메뉴A</a></li>
+                    <li>
+                        <a href="#">서브메뉴A</a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴A2</a></li>
+                            <li><a href="#">서브메뉴A2</a></li>
+                            <li><a href="#">서브메뉴A2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">메뉴B</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴B</a></li>
+                    <li><a href="#">서브메뉴B</a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴B2</a></li>
+                            <li><a href="#">서브메뉴B2</a></li>
+                            <li><a href="#">서브메뉴B2</a>
+                                <ul class="sub">
+                                    <li><a href="#">서브메뉴B3</a></li>
+                                    <li><a href="#">서브메뉴B3</a></li>
+                                    <li><a href="#">서브메뉴B3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">서브메뉴B</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메뉴C</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴C</a>
+                        <ul class="sub">
+                            <li><a href="#">서브메뉴C2</a></li>
+                            <li><a href="#">서브메뉴C2</a></li>
+                            <li><a href="#">서브메뉴C2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">서브메뉴C</a></li>
+                    <li><a href="#">서브메뉴C</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(".sub").hide();
+
+        $(".menu li").on('mouseenter', function() {
+            $(this).children('.sub').fadeIn(100);
+        }).on('mouseleave', function() {
+            $(this).children('.sub').fadeOut(100);
+        });
+
+    </script>
+</body>
+</html>
