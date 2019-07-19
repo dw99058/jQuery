@@ -52,14 +52,15 @@ a{
 }
 
 #gnb.effect {
-
+    background: rgba(0, 0, 0, 0.7);
 }
 #gnb.effect li a {
-
+    color: #fff;
 }
 
 /*섹션공통*/
 section {
+    overflow: hidden;
     height: 100%;
     padding: 0 50px;
 }

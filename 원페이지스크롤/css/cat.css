@@ -1,0 +1,79 @@
+/* 초기화 */
+html,body{
+    height: 100%;
+}
+body,h1,h2,p,ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.hidden{
+    position: absolute;
+    left: -9999px;
+}
+
+/* 헤더 */
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+#header h1{
+    font-size: 40px;
+    text-align: center;
+    color: green;
+    padding: 40px 0 20px;
+    letter-spacing: 10px;
+    text-indent: 10px;
+}
+#header h2{
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* 네비 */
+#gnb ul li{
+    text-align: center;
+    line-height: 50px;
+}
+#gnb ul li a{
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+#gnb ul li a:hover{
+    color: rgba(255, 255, 255, 0.7);
+}
+#gnb ul li.on a{
+    background: #46ac64;
+    color: #000;
+}
+
+/* 섹션공통 */
+section{
+    height: 100%;
+    background: no-repeat center top / cover fixed;
+}
+section > div{
+    padding-left: 350px;
+}
+
+/* 섹션개별 */
+#cat1{
+    background-image: url(../images/cat1.jpg);
+}
+#cat2{
+    background-image: url(../images/cat2.jpg);
+}
+#cat3{
+    background-image: url(../images/cat3.jpg);
+}
