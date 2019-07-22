@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>패럴랙스 스크롤링</title>
+    <link rel="stylesheet" href="css/cat2.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <div id="headerWrap">
+        <header id="header">
+            <h1>로고</h1>
+        </header>
+        <nav id="gnb">
+            <ul>
+                <li><a href="#section1">메뉴1</a></li>
+                <li><a href="#section2">메뉴2</a></li>
+                <li><a href="#section3">메뉴3</a></li>
+            </ul>
+        </nav>
+    </div>
+    <section id="section1" data-speed="10">
+        <div>컨텐츠1</div>
+    </section>
+    <section id="section2" data-speed="5">
+        <div>컨텐츠2</div>
+    </section>
+    <section id="section3" data-speed="15">
+        <div>컨텐츠3</div>
+    </section>
+
+    <script src="js/cat2.js"></script>
+</body>
+
+</html>

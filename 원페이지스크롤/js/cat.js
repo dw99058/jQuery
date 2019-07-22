@@ -16,8 +16,12 @@ $(document).ready(function(){
             })
 
             var prevIndex = $(this).index();
-            if(prevIndex < 0){
-                prevIndex = 0
+            console.log(prevIndex)
+            if(prevIndex < 2){
+                prevIndex = 2
+            }else{
+                $('#gnb li').removeClass('on');
+                $('#gnb li:eq(' + (prevIndex-2) + ')').addClass('on');
             }
         }else if(delta < 0){ // 휠을 내렸을 경우
             var next = $(this).next().position().top
@@ -26,8 +30,12 @@ $(document).ready(function(){
             })
 
             var nextIndex = $(this).index();
+            console.log(nextIndex)
             if(nextIndex > 2){
                 nextIndex = 2
+            }else{
+                $('#gnb li').removeClass('on');
+                $('#gnb li:eq(' + nextIndex + ')').addClass('on');
             }
         }
     })

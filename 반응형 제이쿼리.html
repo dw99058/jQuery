@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        *{margin: 0; padding: 0}
+        li{list-style: none;}
+        h1{padding: 20px 0; text-align: center; font-size: 20px}
+        @media all and (min-width:700px){
+            .snb{display: none;}
+            #gnb > ul{height: 50px; background: #97c5e6;}
+            #gnb > ul > li{position: relative; width: 25%; height: 50px; float: left; text-align: center; line-height: 50px;}
+            .snb {position: absolute; top: 50px; width: 100%;}
+            .snb li{text-align: center; line-height: 40px;}
+        }
+        @media all and (max-width: 699px){
+            #gnb > ul{height: auto; background: #97c5e6;}
+            #gnb > ul li{position: relative; height: 50px; line-height: 50px;}
+            .snb{position: absolute; top: 0; left: 50px; width: 100%;}
+            .snb li{float: left;}
+        }
+    </style>
+</head>
+<body>
+    <h1>해상도에 따른 제이쿼리 효과</h1>
+    <nav id="gnb">
+        <ul>
+            <li>
+                <a href="#">메뉴1</a>
+                <ul class="snb">
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">메뉴1</a>
+                <ul class="snb">
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">메뉴1</a>
+                <ul class="snb">
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">메뉴1</a>
+                <ul class="snb">
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        $('#gnb > ul > li').mouseenter(function(){
+            $('.snb').stop().slideDown();
+        }).mouseleave(function(){
+            $('.snb').stop().slideUp();
+        })
+        
+    </script>
+</body>
+</html>

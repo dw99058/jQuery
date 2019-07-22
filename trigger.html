@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        button{
+            margin: 10px;
+        }
+        div{
+            color: blue;
+            font-weight: bold;
+        }
+        span{
+            color: red;
+        }
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <button>Button #1</button>
+    <button>Button #2</button>
+    <div><span>0</span>button #1 clicks.</div>
+    <div><span>0</span>button #2 clicks.</div>
+
+    <script>
+        var n = 0
+        $('button:first').click(function(){
+            $('div:nth-of-type(1) span').text(++n)
+        })
+
+        var m = 0
+        $('button:last').click(function(){
+            $('button:first').trigger('click'); // trigger():다른 이벤트를 강제적으로 실행한다
+            $('div:nth-of-type(2) span').text(++m)
+        })
+    </script>
+</body>
+</html>
