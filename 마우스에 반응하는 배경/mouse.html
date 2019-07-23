@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>마우스에 반응하는 배경</title>
+  <style>
+    html, body { height: 100%; }
+    body { 
+      overflow: hidden;
+      background: url(flash.jpg) no-repeat 0 0 / 150%;
+    }
+  </style>
+  <script src="js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+  <script>
+    $('body').on('mousemove',function(e){
+      var bgX = ($(window).width() / 2 - e.pageX) / 20 - $(window).width()*0.1;
+      var bgY = ($(window).height() / 2 - e.pageY) / 20 - $(window).height()*0.1;
+      console.log(bgX, bgY);
+
+      var bgPos = bgX + "px " + bgY + "px"
+      $(this).css({
+        backgroundPosition : bgPos
+      })
+    })
+    
+  </script>
+</body>
+</html>

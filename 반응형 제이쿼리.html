@@ -10,11 +10,11 @@
         *{margin: 0; padding: 0}
         li{list-style: none;}
         h1{padding: 20px 0; text-align: center; font-size: 20px}
+        .snb{display: none;}
         @media all and (min-width:700px){
-            .snb{display: none;}
             #gnb > ul{height: 50px; background: #97c5e6;}
             #gnb > ul > li{position: relative; width: 25%; height: 50px; float: left; text-align: center; line-height: 50px;}
-            .snb {position: absolute; top: 50px; width: 100%;}
+            .snb {position: absolute; top: 50px; width: 100%;    background: #ddd;}
             .snb li{text-align: center; line-height: 40px;}
         }
         @media all and (max-width: 699px){
@@ -65,11 +65,42 @@
     </nav>
 
     <script>
-        $('#gnb > ul > li').mouseenter(function(){
-            $('.snb').stop().slideDown();
-        }).mouseleave(function(){
-            $('.snb').stop().slideUp();
+        function resizing(){
+            if($(window).width() >= 700){
+                $('#gnb .nav2 > li').off();
+                $('#gnb > ul').removeClass().addClass('nav1');
+
+                $('#gnb > ul > li').mouseenter(function(){
+                    $(this).children('ul').slideDown(200);
+                }).mouseleave(function(){
+                    $(this).children('ul').stop().slideUp(200);
+                })
+            }else{
+                $('#gnb .nav1 > li').off();
+                $('#gnb > ul').removeClass().addClass('nav2');
+
+                $('#gnb > ul > li').mouseenter(function(){
+                    $(this).children('ul').show()
+                }).mouseleave(function(){
+                    $(this).children('ul').hide()
+                })
+            }
+        }
+        resizing();
+
+
+        $(window).resize(function(){ // 윈도우 리사이징 할때마다 되게
+            resizing();
         })
+        
+        
+        
+
+       
+
+        // $('#gnb > ul > li').click(function(){
+        //     $(this).children('ul').show()
+        // })
         
     </script>
 </body>
