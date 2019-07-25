@@ -5,7 +5,7 @@ html, body { height: 100%; }
 
 #sliderWrap{
     height: 100%;
-    overflow: scroll;
+    overflow: hidden;
 }
 #sliderList{
     height: 100%;
