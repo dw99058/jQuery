@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>이미지 쪼개기</title>
+    <style>
+        #sliceWrap{
+            width: 640px; height: 480px; margin: 0 auto;
+        }
+        #sliceWrap p{
+            background: #ccc;
+            text-align: center; line-height: 480px; font-size: 50px;
+        }
+        #sliceWrap p a{
+            text-decoration: none; text-transform: uppercase; color: #fff;
+        }
+        #sliceWrap div{
+            position: absolute;
+            width: 640px; height: 240px; background: url(image.jpg) no-repeat;
+        }
+        #sliceWrap .top{
+            top: 0; background-position: center top;
+        }
+        #sliceWrap .bottom{
+            bottom: 0; background-position: center bottom;
+        }
+    </style>
+</head>
+<body>
+    <div id="sliceWrap">
+        <p><a href="#">Lorem Ipsum</a></p>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </div>
+</body>
+</html>

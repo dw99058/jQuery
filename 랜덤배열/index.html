@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>랜덤 별배치</title>
+    <style>
+        div {  position: absolute;  }
+    </style>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        for ( var n = 1; n <= 200; n++  ) {
+            // 1-6
+            var index = Math.ceil(Math.random() * 6);
+
+            // 30-100
+            var size = Math.floor(Math.random() * 70) + 30;
+
+            // 0-1920
+            var posX = Math.floor(Math.random() * 1820) ;
+
+            // 0-700
+            var posY = Math.floor(Math.random() * 850);
+
+            // 0.2-0.9
+            var opacity = (Math.random() * 0.6) + 0.3;
+
+
+            var $img = $("<img src='star" + index + ".png'>").css("width", size);
+            var $star = $('<div></div>').append($img).css({ left: posX, top: posY, opacity: opacity })
+            $("#container").append($star);
+        }
+
+    </script>
+</body>
+</html>
