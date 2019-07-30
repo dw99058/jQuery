@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>텍스트 애니메이션</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+        #box { position: relative; width: 1000px; margin: 100px auto 0; }
+        span { position: absolute; width: 300px;
+               text-align: center; top: 0; }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+
+    <script>
+        var box = document.getElementById('box');
+        var cons = "Hello! JavaScript!".toUpperCase();
+        var text = cons.split('');
+        console.log(text);
+        for(var i=0; i<text.length; i++){
+            box.innerHTML += "<span>"+text[i]+"</span>"
+        }
+
+        var span = document.getElementsByTagName('span')
+        console.log(span)
+
+        var n = 0;
+        function textAni(){
+            $('span:eq('+n+')').animate({'font-size':'50px', opacity : 1})
+            if(n >= text.length){
+               return false;
+            }
+            n++;
+            console.log(n)
+        }
+        setInterval(textAni,50)
+
+
+        //span 애니메이션 초기값 설정 : 위치, 투명도, 폰트 크기
+        $('span').each(function(){
+            $(this).css({
+                left : $(this).index()*30,
+                opacity : 0,
+                fontSize : 0
+            })
+        })
+    </script>
+</body>
+</html>
