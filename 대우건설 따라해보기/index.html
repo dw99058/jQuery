@@ -2,126 +2,119 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>대우건설</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
-    <header>
-        <div class="wrap">
-            <h1><a href="index.html"><img src="image/logo.png" alt=""></a></h1>
-            <nav>
-                <ul class="lnb">
-                    <li>
-                        <a href="#">회사소개</a>
-                        <ul>
-                            <li>
-                                <a href="#">기업정보</a>
-                            </li>
-                            <li>
-                                <a href="#">지속가능경영</a>
-                            </li>
-                            <li>
-                                <a href="#">R&amp;D</a>
-                            </li>
-                            <li>
-                                <a href="#">투자정보</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">사업분야</a>
-                        <ul>
-                            <li>
-                                <a href="#">토목</a>
-                            </li>
-                            <li>
-                                <a href="#">플랜트</a>
-                            </li>
-                            <li>
-                                <a href="#">건축</a>
-                            </li>
-                            <li>
-                                <a href="#">주택</a>
-                            </li>
-                            <li>
-                                <a href="#">개발</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">홍보센터</a>
-                        <ul>
-                            <li>
-                                <a href="#">공고</a>
-                            </li>
-                            <li>
-                                <a href="#">CI/BI</a>
-                            </li>
-                            <li>
-                                <a href="#">브로슈어</a>
-                            </li>
-                            <li>
-                                <a href="#">기업광고</a>
-                            </li>
-                            <li>
-                                <a href="#">홍보영상</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">고객센터</a>
-                        <ul>
-                            <li>
-                                <a href="#">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="#">고객상담실</a>
-                            </li>
-                            <li>
-                                <a href="#">사이버 감사실</a>
-                            </li>
-                            <li>
-                                <a href="#">윤리 Help Line</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <ul class="gnb">
+    <header id="header">
+        <h1>대우건설</h1>
+        <nav id="gnb">
+            <h2 class="hidden">뉴스룸, 투자정보, 채용 및 영문사이트 이동메뉴</h2>
+            <ul>
+                <li><a href="#">뉴스룸</a></li>
+                <li><a href="#">투자정보</a></li>
+                <li><a href="#">채용</a></li>
+                <li class="engSite"><a href="#">ENG</a></li>
+            </ul>
+        </nav>
+        <nav id="lnb">
+            <h2 class="hidden">대우건설 주요메뉴</h2>
+            <ul class="depth1">
                 <li>
-                    <a href="#">뉴스룸</a>
+                    <a href="#">회사소개</a>
+                    <ul class="depth2">
+                        <li class="sub_menu1">
+                            <a href="#">기업정보</a>
+                            <ul class="depth3">
+                                <li><a href="#">CEO 인사말</a></li>
+                                <li><a href="#">비전</a></li>
+                                <li><a href="#">주요연혁</a></li>
+                                <li><a href="#">조직도</a></li>
+                                <li><a href="#">글로벌 네트워크</a></li>
+                                <li><a href="#">찾아오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub_menu2"><a href="#">지속가능경영</a></li>
+                        <li class="sub_menu3"><a href="#">R&amp;D</a></li>
+                        <li class="sub_menu4"><a href="#">투자정보</a></li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="#">투자정보</a>
+                    <a href="#">사업분야</a>
+                    <ul class="depth2">
+                        <li><a href="#">토목</a></li>
+                        <li><a href="#">플랜트</a></li>
+                        <li><a href="#">건축</a></li>
+                        <li><a href="#">주택</a></li>
+                        <li><a href="#">개발</a></li>
+                        <li><a href="#">Project Map</a></li>
+                        <li><a href="#">Masterworks</a></li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="#">채용</a>
+                    <a href="#">홍보센터</a>
+                    <ul class="depth2">
+                        <li><a href="#">공고</a></li>
+                        <li><a href="#">CI / BI</a></li>
+                        <li><a href="#">브로슈어</a></li>
+                        <li><a href="#">기업광고</a></li>
+                        <li><a href="#">홍보영상</a></li>
+                        <li><a href="#">사보 대우건설인</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">고객센터</a>
+                    <ul class="depth2">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">고객상담실</a></li>
+                        <li><a href="#">사이버 감사실</a></li>
+                        <li><a href="#">윤리 Help Line</a></li>
+                        <li><a href="#">상담내역 관리</a></li>
+                        <li><a href="#" target="_blank" title="새창연결">OB사랑방</a></li>
+                    </ul>
                 </li>
             </ul>
-            <a href="#" class="lang">ENG</a>
-        </div>
+        </nav>
     </header>
-    <section>
-        <h3>BUILD <br>TOGETHER</h3>
-        <p>고객과 함께 최고의 가치를 실현하는 기업</p>
-    </section>
-    <aside>
-        <div>
-            <a href="#"><img src="image/main_banner.jpg" alt=""></a>
+    <main>
+        <section id="slogan">
+            <h2 class="hidden">대우건설 슬로건</h2>
+            <p class="slogan1">build<br> together</p>
+            <p class="slogan2">고객과 함께 최고의 가치를 실현하는 기업</p>
+        </section>
+        <div id="mainWrap">
+            <section id="newsRoom">
+                <h2><a href="#" id="newsBtn" title="뉴스룸 list 보기">뉴스룸</a></h2>
+                <div id="newsCont" class="news_cont">
+                    <ul>
+                        <li>
+                            <a href="#">사보 대우건설인 7+8월호 <span class="data">2019.07.29</span></a>
+                        </li>
+                        <li>
+                            <a href="#">대우건설, 견본주택 2곳에 4만여 명 방문<span class="data">2019.07.29</span></a>
+                        </li>
+                        <li>
+                            <a href="#">경기도시공사-대우건설, 남양주 다산신도시 자연앤푸르지오 분양<span class="data">2019.07.24</span> </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="info">
+                <h2 class="hidden">회사소개</h2>
+                <h3 class="hidden">지속가능경영</h3>
+                <h4><a href="#">지속가능경영</a></h4>
+                <h4><a href="#">사회공헌활동</a></h4>
+            </section>
         </div>
-        <div>
-            <div class="left">
-                <div>뉴스룸</div>
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="right">
-                <a href="#">지속가능 경영</a>
-                <a href="#">사회공헌 활동</a>
-            </div>
+        <div id="video">
+            <video loop muted id="videoMovie" src="video/main_movie0.mp4"></video>
+            <button type="button" id="videoControl" data-state="play">video stop</button>
         </div>
-    </aside>
+    </main>
+    <aside id="quick">
+        <h2 class="hidden">바로가기메뉴</h2>
+        <a class="banner" href="#" target="_blank">대우건설 유튜브 바로가기</a>      
+    </aside>    
 </body>
 </html>
